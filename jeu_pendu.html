@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title> Jeu du Pendu </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="stylesheet" HREF="jeu_pendu.css">
+</head>
+
+<body>
+    <nav>
+        <div class="profil">
+            <img src="images/profil.jpg" alt="photo de profil" />
+            <h1> <a href="index.html">Clément Gehin </a></h1>
+        </div>
+        <ul>
+            <li> <a href="#presentation"> Présentation </a> </li>
+            <li> <a href="#projet"> Le Projet </a> </li>
+            <li> <a href="#contacts"> Contacts </a> </li>
+        </ul>
+    </nav>
+
+    <section class="contenu" id="presentation">
+
+        <header>
+            <h1>Projet de jeu du pendu avec TKinter </h1>
+            <p>Voici une courte vidéo vous montrant les qualités (et défauts) du premier jeu réalisé en collaboration avec un camarade de l'IUT de Saint-dié en octobre 2020. Nous y retrouvons un mode 1 joueur, permettant de jouer avec un mot choisi aléatoirement
+                dans une bibliothèque, mais également de jouer à plusieurs, avec une première personne faisant devnier le mot à la seconde.</p>
+            <button class="btn btn-center"> Le pendu </button>
+        </header>
+
+        <section class="video" id="projet">
+            <video controls="controls">
+					<source src="images/pendu.mp4" type="video/mp4"/>
+				</video>
+        </section>
+
+        <section class="pdf" id="maintenance">
+            <button class="btn btn-center"> La maintenance</button>
+            <p> Afin d'améliorer ce projet existant déjà bien avancé de notre groupe d'amis, j'ai décidé d'effectuer les modifications suivantes : </p>
+            <ul>
+                <li> Refonte graphique totale</li>
+                <li> Ajout d'un dictionnaire</li>
+            </ul>
+            <p> Cette mise à jour est devenue une nécessité. En effet, nous avons réalisé ce jeu à la fin de l'année 2020, et depuis, j'ai passé près d'un an et demi à acquérir de nouvelles compétences, me permettant de faire évoluer ce jeu, du point de vue
+                gameplay, mais également graphique. </p>
+            <button class="btn btn-center"> La veille technologique</button>
+            <p>Pour effectuer cette maintenance, minimale, j'ai dû étudier de nombreuses méthodes avec lesquelles j'aurais pu effectuer ma maintenance. Cela m'a donc demandé un travail de recherche, afin de réalisé les changements optimaux.</p>
+            <p>Tout d'abord, revenons sur la refonte graphique du jeu. La couleur pêche utilisée au préalable n'était pas réellement professionnelle, et méritait d'être épurée. J'ai alors décidé de revenir sur des tons neutres, et donc parmi toutes les couleurs
+                possibles, j'ai préféré rester sur la couleur blanche, basique.<br> Ensuite, toujours d'un point de vue graphique, le pendu s'affichait de manière incorrecte, et à chaque faute, ce dernier changeait de place dans la fenêtre. Plusieurs
+                solutions s'offraient alors à moi : garder mon pendu et l'afficher correctement, en affichant mon personnage en dernier, ou en réalisant un changement plus profond, en changeant de modèle. Et donc, pour contraster totalement avec le jeu
+                de base et pour ajouter de l'originalité, j'ai décidé de créer une image de pendu différente, comme vous pouvez le voir dans le résultat ci-desous. Ainsi, on affiche le personnage (ici le cercueil) en dernier, et l'image ne bouge pas dans
+                la fenêtre à chaque nouvelle erreur. </p>
+            <p>Poursuivons maintenant avec la diversité de mots du jeu.En effet, sur le projet de base, nous avions réalisé une liste de près de 75 mots écrite à la main, il était donc impératif de changer cela. Dans cette optique, j'ai alors eu deux idées
+                pour la réalisation de mon dictionnaire. Prendre une liste dans un fichier texte, et en extraire au hasard un mot, ou utiliser la bibliothèque <a href="https://pypi.org/project/Random-Word/"> random word </a>. J'ai choisi la première option,
+                car moins chronophage. L'utiisation de random_word m'aurait par la suite obligé à utiliser le module google translate, car les mots générés le sont uniquement en anglais. De plus, le fichier texte récupéré sur internet contient plus de
+                22000 mots, ce qui laisse déjà une grande variété.
+            </p>
+            <section class="video" id="projet">
+                <video controls="controls">
+						<source src="images/maintenance.mp4" type="video/mp4"/>
+					</video>
+            </section>
+
+            <button class="btn btn-center"> La suite ? </button>
+            <p> Dans l'idée d'une future maintenance, deux autres fonctionnalités pourraient être ajoutées.</p>
+            <p>Tout d'abord la possibilité de changer le langage du jeu, et donc de chercher des mots dans une langue étrangère.<br> Dans un second temps l'ajout d'une fonctionnalité permettant de ne plus appuyer avec la souris sur les lettres, mais bien
+                d'entrer la lettre souahitée au clavier.</p>
+        </section>
+    </section>
+
+
+
+    <footer id="contacts">
+        <div class="contacts">
+            <button class="btn btn-footer"> Contacts : </button>
+            <p><img src="images/localisation.png" alt="localisation"> 7 Faubourg de Ramberchamp, Gérardmer, France </p>
+            <p><img src="images/mail.png" alt="mail"> ent.clementgehin@gmail.com </p>
+            <p><img src="images/telephone.png" alt="telephone"> +33 6.72.56.45.75 </p>
+        </div>
+        <div class="contacts">
+            <button class="btn btn-footer"> Réseaux sociaux : </button>
+            <p>
+                <a href="https://github.com/clement-ghn">
+                    <img src="images/github.png" alt="github" class="favicon"></a>
+                <a href="https://www.linkedin.com/in/cl%C3%A9ment-gehin-631199207/"><img src="images/linkedin.png" alt="linkedin" class="favicon"></a>
+                <a href="https://www.instagram.com/clement_ghn/"><img src="images/instagram.png" alt="instagram" class="favicon"></a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

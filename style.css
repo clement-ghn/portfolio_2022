@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Dosis:wght@300&display=swap');
+body {
+    padding: 0 2%;
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    color: #000000;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    background-color: white;
+}
+
+nav .profil {
+    display: flex;
+    align-items: center;
+}
+
+nav .profil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav .profil h1 {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul a {
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul a:hover {
+    transition: 0.7s;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 80px #FFFFFF;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.contenu {
+    margin: 4%;
+}
+
+.contenu header {
+    margin-top: 5%;
+    text-align: justify;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenu header h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Cardo', serif;
+}
+
+.contenu header img {
+    width: 25%;
+    float: right;
+}
+
+.btn {
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 20%;
+    background: #000000;
+}
+
+.btn-center::after {
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+}
+
+.btn-center:hover::after {
+    transform: scale(1, 1);
+}
+
+.btn-2 {
+    font-family: 'Dosis';
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    width: 65%;
+}
+
+.btn-droite {
+    text-align: right;
+}
+
+.btn-gauche {
+    text-align: left;
+}
+
+.btn .btn-projet {
+    text-decoration: none;
+}
+
+.btn .btn-projet:hover {
+    transition: 0.7s;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 80px #FFFFFF;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.contenu .image1 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+}
+
+.contenu .image1 img:hover {
+    filter: brightness(50%);
+}
+
+.contenu .cv img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenu .section-projets h1 {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.contenu .section-projets .projets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenu .section-projets .projets .projet {
+    margin-right: 40px;
+    max-width: 195px;
+}
+
+.contenu .section-projets .projets .projet h4 {
+    margin: 0;
+}
+
+.contenu .section-projets .projets .projet .descrpition {
+    font-size: 10px;
+}
+
+.contenu .section-projets .projets .projet .dates {
+    font-size: 20px;
+}
+
+.contenu .section-cv .projets {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.contenu .section-cv .projets .projet {
+    margin-right: 15%;
+    max-width: 300px;
+}
+
+.contenu .section-cv .projets .projet h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.contenu .section-cv .projets .etudes {
+    margin-right: 5%;
+    max-width: 250px;
+    margin-bottom: 5%;
+}
+
+.contenu .section-cv .projets .etudes h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.contenu .section-cv ul {
+    padding: 17px;
+}
+
+.contenu .section-cv ul li {
+    padding: 3px;
+}
+
+footer {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+}
+
+footer .contacts a {
+    text-decoration: none;
+}
+
+footer .contacts p {
+    font-size: 12px;
+    color: #ccc;
+    cursor: default;
+}
+
+footer .contacts p:hover {
+    color: #ffffff;
+}
+
+footer img {
+    width: 20px;
+    height: 20px;
+}
+
+.favicon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+footer .btn {
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    background: #000000;
+    color: #ffffff;
+    padding: 1rem 0;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+footer .btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 20%;
+    background: #ffffff;
+}
+
+footer .btn-footer::after {
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+}
+
+footer .btn-footer:hover::after {
+    transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+    .page-content header {
+        margin-top: 10%;
+        max-width: 100%;
+    }
+    .contenu .section-projets {
+        margin-top: 15%;
+    }
+    .contenu .section-projets h1 {
+        font-size: 15px;
+    }
+    .contenu .section-projets .projet {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .contenu .section-projets .etudes {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    footer {
+        justify-content: flex-start;
+    }
+    footer .contacts {
+        width: 80%;
+    }
+}

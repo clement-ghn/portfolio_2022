@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title> Application mobile </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="stylesheet" HREF="app_mobile.css">
+</head>
+
+<body>
+    <nav>
+        <div class="profil">
+            <img src="images/profil.jpg" alt="photo de profil" />
+            <h1> <a href="index.html">Clément Gehin </a></h1>
+        </div>
+        <ul>
+            <li> <a href="#presentation"> Présentation </a> </li>
+            <li> <a href="#projet"> Le Projet </a> </li>
+            <li> <a href="#contacts"> Contacts </a> </li>
+        </ul>
+    </nav>
+
+    <section class="contenu" id="presentation">
+        <header>
+            <h1>Développement d'une application mobile avec Android Studio </h1>
+            <p>Ci-dessous, retrouvez le développement pas à pas de mon application mobile développé à l'aide d'Android Studio. Cette application a pour but de regrouper des séries d'exercices physiques, réalisables à domicile, et qui sont regroupés en fonction
+                de la partie du corps sur laquelle vous souhatez cibler votre travail.</p>
+            <button class="btn btn-center"> L'application </button>
+        </header>
+
+        <section class="application" id="projet">
+            <p> Encore en cours de traitement, voici ce à quoi devrait ressembler mon application une fois entièrement terminée :</p>
+        </section>
+
+        <section class="image1">
+            <img src="images/app_mobile.png" alt="presentation" />
+        </section>
+
+
+
+        <section class="pdf" id="maintenance">
+            <button class="btn btn-center"> La maintenance</button>
+            <p>Voici l'ajout qui sera ajouté au projet initial : </p>
+            <ul>
+                <li> Ajout d'un compteur de calories</li>
+            </ul>
+            <p> Cet ajout offre une nouvelle perspective d'utilisation de l'application. En effet, le compteur calorique ajouté permet aux utilisateurs de surveiller leur alimentation, et notamment leur nombre de calories, dans l'optique de d'une prise de
+                muscles, d'une perte de poids, ... </p>
+            <button class="btn btn-center"> La veille technologique</button>
+            <p>Pour effectuer cette maintenance, j'ai réfléchi à plusieurs solutions, toutes très viables. Cela m'a donc demandé un travail de recherche, afin de me concentrer sur la manière la plus simple et efficace de réaliser ce projet, dans un temps
+                très restreint.</p>
+            <p>Tout d'abord, il faut que je me demande comment remettre à jour le compteur de calories quotidiennement. La manière la solution la plus simple à coder et peut-être la plus simple pour l'utilisateur est de remettre à 0 à la main le compteur.
+                J'ai donc opté pour la réalisation d'un bouton effaçant tout ce qui a été placé dans le compteur pour la journée.</p>
+            <p>Ensuite, le second questionnement est de savoir comment les aliments et leurs calories vont être comptabilisés. En effet, au Québec, les calories de chaque aliment sont inscrites sur l'emballage. Cependant, dans d'autres régions du monde comme
+                en France, les novices n'ont pas de réelles façons de savoir combien de calories ils ingèrent. Ainsi, il est donc nécessaire d'insérer une petite base de données avec certains des aliments les plus connus, leur masse ainsi que leur valeur
+                calorique. Si mon application n'avait été destinée qu'au Québec, j'aurais sans aucun doute opté pour une façon plus rapide de faire les choses, en demandant à l'utilisateur de remplir lui-même l'aliment, sa consommation et la valeur calorique
+                de son plat, et aurait ensuite pu enregistrer cette configuration pour les repas suivants.
+            </p>
+            <p> Voici ci-dessous une représentation de la maintenance effectuée :</p>
+            <section class="image1">
+                <img src="images/Calories.png" alt="presentation" />
+            </section>
+
+        </section>
+
+    </section>
+
+    <footer id="contacts">
+        <div class="contacts">
+            <button class="btn btn-footer"> Contacts : </button>
+            <p><img src="images/localisation.png" alt="localisation"> 7 Faubourg de Ramberchamp, Gérardmer, France </p>
+            <p><img src="images/mail.png" alt="mail"> ent.clementgehin@gmail.com </p>
+            <p><img src="images/telephone.png" alt="telephone"> +33 6.72.56.45.75 </p>
+        </div>
+        <div class="contacts">
+            <button class="btn btn-footer"> Réseaux sociaux : </button>
+            <p>
+                <a href="https://github.com/clement-ghn">
+                    <img src="images/github.png" alt="github" class="favicon"></a>
+                <a href="https://www.linkedin.com/in/cl%C3%A9ment-gehin-631199207/"><img src="images/linkedin.png" alt="linkedin" class="favicon"></a>
+                <a href="https://www.instagram.com/clement_ghn/"><img src="images/instagram.png" alt="instagram" class="favicon"></a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title> Modèle épidémique </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="stylesheet" HREF="epidemies.css">
+</head>
+
+<body>
+    <nav>
+        <div class="profil">
+            <img src="images/profil.jpg" alt="photo de profil" />
+            <h1> <a href="index.html">Clément Gehin </a></h1>
+        </div>
+        <ul>
+            <li> <a href="#presentation"> Présentation </a> </li>
+            <li> <a href="#projet"> Le Projet </a> </li>
+            <li> <a href="#contacts"> Contacts </a> </li>
+        </ul>
+    </nav>
+
+    <section class="contenu" id="presentation">
+        <header>
+            <h1>Modèle de prévision d'épidémies</h1>
+            <p>Dans ce projet réalisé à l'IUT de Saint-Dié-des-Vosges, en France, 2 amis et moi-même avons mis en place un programme permettant de modéliser et prévoir les évolutions d'une épidémies, suivants plusieurs paramètres qu'il est possible de faire
+                varier. Ainsi, selon la durée de contagion, la population totale, le temps de guérison, ... Nous pouvons donc prévoir ce que va devenir ce virus. Pour cela nous nous sommes appuyés sur les formules mathématiques provenant du modèle SIR,
+                visant à prévoir les variations statitiques des épidémies</p>
+            <button class="btn btn-center"> Le projet </button>
+        </header>
+
+        <section class="pdf" id="projet">
+            <p> Le pojet initiale est disponible sur <a href="https://github.com/Oxyyy/m3202-SIR-sim/tree/main/m3202/src"> ce Github</a>. A l'origine, le projet avait donc pour but de nous faire varier 6 paramètres : </p>
+            <ul>
+                <li> La population </li>
+                <li> Le nombre de départ d'infectés</li>
+                <li> Le nombre de générations (= nombre de jours)</li>
+                <li> La probabilité de contagion </li>
+                <li> Le seuil de proximité de contagion </li>
+                <li> La probabilité de rétablissement </li>
+            </ul>
+            <p> Après avoir judicieusement choisit nos paramètres, nous obtenons un schéma prévisionnel de l'épidémie de ce type :</p>
+            <img src="images/schema.PNG" alt="schema" />
+        </section>
+        <section class="pdf" id="maitenance">
+            <button class="btn btn-center"> La maintenance</button>
+            <p> Afin d'améliorer ce projet existant déjà bien avancé de notre groupe d'amis, j'ai décidé d'ajouter la fonctionnalité suivante : </p>
+            <ul>
+                <li> Enregistrement dans les fichiers d'un graphique après sa création</li>
+            </ul>
+            <p> L'ajout de cette fonctionnalité à notre projet était selon moi un ajout nécessaire. En effet, avant cela pour garder une trace d'une simulation il fallait faire une capture d'écran, ce qui n'était pas toujours facile et évident pour tout le
+                monde. Avec cette mise à jour, chaque simulation sera enregistrée et donc consultable à partir de ses images. </p>
+            <button class="btn btn-center"> La veille technologique</button>
+            <p> Pour effectuer cette maintenance, j'ai pu réfléchir à plusieurs manières de réaliser le travail.<br>Tout d'abord, il faut savoir que le projet initiale était en Java, langage que nous avons beaucoup utilisé durant le DUT, et il était donc
+                judicieux de réaliser cette maintenance dans le même langage.</p>
+            <p> Concernant la manière de procéder, plusieurs solutions s'offraient à moi. Le graphique utilisé est une "chart" Java, disponible via la librairie graphique "jfreechart". J'ai d'abord pensé à créer le chemin d'un fichier, et d'y enregistrer
+                directement la chart, grâce à l'utilisation de <a href="https://www.jfree.org/jfreechart/api/javadoc/org/jfree/chart/ChartUtils.html"> ChartUtils</a>, ce qui est une opération assez simple ne prenant qu'une à deux lignes. Cependant, avec
+                cette solution, seul le graphique aurait été enregistré, et les paramètres utilisés pour sa réalisation auraient été perdus, et donc aucune possibilité de savoir quels facteurs influençaient les courbes du graphiques, si on ne les notait
+                pas manuellement en parallèle.<br> Il était selon moi préférable de comparer cela directement sur les enregistrements de graphique, et il a donc fallu que je me renseigne sur les alternatives possibles. Je n'en ai pas trouvé beaucoup,
+                cependant une solution simple s'est présentée, tenant en 4 lignes de code. <br> Pour cela, on crée un container regroupant l'entièreté du panneau d'affichage. On crée ensuite une <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/image/BufferedImage.html"> BufferedImage </a>                qui va récupérer notre container sous forme d'image. On va créer l'image, puis l'écrire/enregistrer sous format .png dans notre répertoire avec le nom "graphique.png", grâce à la librairie <a href="https://docs.oracle.com/javase/7/docs/api/javax/imageio/ImageIO.html"> ImageIO. </a>                </p>
+            <button class="btn btn-center"> Le résultat</button>
+            <p> Vous pouvez retrouver <a href="https://github.com/clement-ghn/m3202-SIR-sim/blob/main/README.md"> ici</a> le code de mes travaux. Lors de l'appui sur le bouton "Démarrer la simulation" (que j'ai déplacé au bas de ma fenêtre), une image au
+                format .png est directement créé dans le répertoire dans lequel se trouve la simulation.
+                <p>
+                    <p> Ci-dessous, nous retrouvons un aperçu de la maintenance effectuée. Le répertoire est bien vide au départ, puis, après avoir démarrer l'application et lancer une simulation, on se retrouve avec le graphique enregistré dans les fichiers
+                        de l'application.</p>
+                    <section class="video">
+                        <video controls="controls">
+						<source src="images/Maintenance_epidemie.mp4" type="video/mp4"/>
+					</video>
+                    </section>
+        </section>
+    </section>
+
+    <footer id="contacts">
+        <div class="contacts">
+            <button class="btn btn-footer"> Contacts : </button>
+            <p><img src="images/localisation.png" alt="localisation"> 7 Faubourg de Ramberchamp, Gérardmer, France </p>
+            <p><img src="images/mail.png" alt="mail"> ent.clementgehin@gmail.com </p>
+            <p><img src="images/telephone.png" alt="telephone"> +33 6.72.56.45.75 </p>
+        </div>
+        <div class="contacts">
+            <button class="btn btn-footer"> Réseaux sociaux : </button>
+            <p>
+                <a href="https://github.com/clement-ghn">
+                    <img src="images/github.png" alt="github" class="favicon"></a>
+                <a href="https://www.linkedin.com/in/cl%C3%A9ment-gehin-631199207/"><img src="images/linkedin.png" alt="linkedin" class="favicon"></a>
+                <a href="https://www.instagram.com/clement_ghn/"><img src="images/instagram.png" alt="instagram" class="favicon"></a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
